@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teacher's Subject App Hub - Access all subject-specific learning apps">
+    <title>Teacher's Subject App Hub</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Subject Hub">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512x512.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-192x192.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-section">
+                <h1>Teacher's Subject App Hub</h1>
+                <p class="powered-by">Powered by <span class="brand">AGF Tech Solutions</span></p>
+            </div>
+        </header>
+
+        <!-- Install App Banner (Shows when app can be installed) -->
+        <div id="installBanner" class="install-banner" style="display: none;">
+            <div class="install-content">
+                <p class="install-text">📱 Install this app on your phone for quick access!</p>
+                <div class="install-buttons">
+                    <button id="installButton" class="btn-install">Install App</button>
+                    <button id="dismissButton" class="btn-dismiss">Not Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="card">
+                <h2 class="card-title">Year 1 Subject Apps</h2>
+                <p class="card-subtitle">Select a subject to access the learning app.</p>
+
+                <!-- Subject Selection Form -->
+                <form id="subjectForm">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a subject --</option>
+                            <option value="https://www.playlab.ai/project/cmd92w06l04rzh10uj4rc3pwv">Additional Mathematics</option>
+                            <option value="https://www.playlab.ai/project/cmdxpx04a2zr2nn0uzjoju8b6">Accounting</option>
+                            <option value="https://www.playlab.ai/project/cmd9384ox05zfji0u5hsjvka9">Applied Technology</option>
+                            <option value="https://www.playlab.ai/project/cmd93hdgx04v9k60urun1snzm">Art and Design Foundation</option>
+                            <option value="https://www.playlab.ai/project/cmd93pozj058tk60u1vi7j5n8">Art and Design Studio</option>
+                            <option value="https://www.playlab.ai/project/cmdxpx04a2zr2nn0uzjoju8b6">Asante Twi</option>
+                            <option value="https://www.playlab.ai/project/cmd93v07f06h5ji0uae4zk9lj">Biology</option>
+                            <option value="https://www.playlab.ai/project/cmekep06f0besnb0uuqf606q5">Business Management</option>
+                            <option value="https://www.playlab.ai/project/cmd940t7h06ujji0ubvswrck1">Chemistry</option>
+                            <option value="https://www.playlab.ai/project/cmdw978jx0k83mg0uij7zjef3">Clothing and Textiles</option>
+                            <option value="https://www.playlab.ai/project/cmd9462xe05urjq0u38blwlcq">Computing</option>
+                            <option value="https://www.playlab.ai/project/cmdw9ntmi2h2and0ug3r5stay">Christian Religious Studies</option>
+                            <option value="https://www.playlab.ai/project/cmd94caqa07a5ji0uyg6tvivz">Design and Communication Technology</option>
+                            <option value="https://www.playlab.ai/project/cmd94ee7j05skgn0uk2rvfvyg">Economics</option>
+                            <option value="https://www.playlab.ai/project/cmdxx258702r9os0ukf1zoqke">English Language</option>
+                            <option value="https://www.playlab.ai/project/cmdw9c1rr2i6jm60utaylrnnc">Food and Nutrition</option>
+                            <option value="https://www.playlab.ai/project/cmdw8k4gv0jowmg0u81kxyyub">French</option>
+                            <option value="https://www.playlab.ai/project/cmd94ugn006q9jq0uu4ntg6y1">General Science</option>
+                            <option value="https://www.playlab.ai/project/cmdw907a32iheo50ujv3ecgl9">Geography</option>
+                            <option value="https://www.playlab.ai/project/cmd94ypa5065ogy0uidiugvn2">Government</option>
+                            <option value="https://www.playlab.ai/project/cmd952nfd05sdju0uns2559uz">ICT (Information & Communication Technology)</option>
+                            <option value="https://www.playlab.ai/project/cmfocc5ql0hasm40uqjmty9d9">Intervention</option>
+                            <option value="https://www.playlab.ai/project/cmdw9yhyd2jldno0viwed8qjo">Islamic Religious Studies</option>
+                            <option value="https://www.playlab.ai/project/cmd954psk065tju0uwu65jc6i">Literature in English</option>
+                            <option value="https://www.playlab.ai/project/cmekev1070atdll0udetpyfqp">Management in Living</option>
+                            <option value="https://www.playlab.ai/project/cmd959ml706q6k60u7e66i89u">Mathematics</option>
+                            <option value="https://www.playlab.ai/project/cmd95bopy05rles0ukg4jo2p5">Music</option>
+                            <option value="https://www.playlab.ai/project/cmd95elao07kmjq0u7tgx043y">Physical Education & Health (Core)</option>
+                            <option value="https://www.playlab.ai/project/cmd95gm2j06kqju0u8bipvxs5">Physical Education & Health (Elective)</option>
+                            <option value="https://www.playlab.ai/project/cmd95kequ08evji0udoma8669">Physics</option>
+                            <option value="https://www.playlab.ai/project/cmd95mhu107zojq0uuzuj21xi">Religious and Moral Education (RME)</option>
+                            <option value="https://www.playlab.ai/project/cmd95sy3u06qzgn0uww395d6c">Social Studies</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Go to App</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Teacher's Subject App Hub. All Rights Reserved.</p>
+            <p class="dev-credit">Developed by <strong>AGF Tech Solutions</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
